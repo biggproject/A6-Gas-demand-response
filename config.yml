@@ -1,0 +1,71 @@
+bau_controller:
+  control_interval_s: 150
+dr_event:
+  participants: ['House_2', 'House_11', 'House_34', 'House_109', 'House_114','House_42']
+  control_interval_s: 30
+pi_controller:
+  kp: 0.01
+  ki: 0.001
+agent:
+  trajectory_length: 48
+  trajectory_interval_s: 900
+  action_space: [0, 1]
+action_dispatcher:
+  enable_dispatch_actions: 1
+  enable_backup_controller: 1
+  temperature_band: 1.0
+house_id_mappings:
+  demo: <private>
+  House_2: <private>
+  House_42: <private>
+  House_11: <private>
+  House_79: <private>
+  House_33: <private>
+  House_34: <private>
+  House_109: <private>
+  House_114: <private>
+  House_9: <private>
+  House_13: <private>
+  House_38: <private>
+
+action_mappings:
+  default:
+    0: 0
+    1: 1
+  demo:
+    0: 0
+    1: 65
+  House_2:
+    0: 0
+    1: 60
+  House_11:
+    0: 0
+    1: 75
+  House_33:
+    0: 0
+    1: 65
+  House_34:
+    0: 0
+    1: 55
+  House_79:
+    0: 0
+    1: 60
+  House_109:
+    0: 0
+    1: 55
+  House_114:
+    0: 0
+    1: 40
+  House_42:
+    0: 0
+    1: 70
+  House_9:
+    0: 0
+    1: 65
+  House_13:
+    0: 0
+    1: 65
+  House_38:
+    0: 0
+    1: 70
+

@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "domx-action-coordinator"
+version = "0.1.0"
+description = "DomX action coordinator is a central service that will get API call from DomX and receive DR Events"
+authors = [""]
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10.8"
+numpy = "^1.24.1"
+flask = "^2.2.0"
+requests = "^2.28.1"
+docstr-coverage = "^2.2.0"
+pandas = "^1.5.2"
+matplotlib = "^3.6.2"
+dill = "^0.3.6"
+jsonmerge = "^1.9.0"
+protobuf = "^4.21.12"
+scikit-learn = "^1.0.2"
+tqdm = "^4.64.1"
+plotly = "^5.11.0"
+wandb = "^0.13.7"
+rltraining = {version = "^0.1.4", source = "glpackages"}
+python-logging-loki = "^0.3.1"
+flask-cors = "^3.0.10"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.18.1"
+
+[tool.poe.tasks]
+force-cuda11 = "python -m pip install torch==1.11.0+cpu -f https://download.pytorch.org/whl/torch_stable.html"
+
+[[tool.poetry.source]]
+name = "glpackages"
+url = "https://gitlab.ilabt.imec.be/api/v4/projects/4471/packages/pypi/simple"
+default = false
+secondary = true
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
